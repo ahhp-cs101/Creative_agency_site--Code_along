@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 :root{
-    --pirmary-color: #f60f20;
+    --pirmary-color: #860ff669;
 }
 
 *{
@@ -19,12 +19,17 @@ html, body{
 
 .logo {
     position: absolute;
-    top: 30px;
-    left: 100px;
-    font-size: 2rem;
+    top: 10px;
+    left: 10px;
+    font-size: 3rem;
     font-weight: 700;
     z-index: 20;
+    margin-bottom: 10px;
+    font-family: cursive;
+    
 }
+
+
 
 .navigation{
     position: fixed;
@@ -112,6 +117,12 @@ section{
 
 }
 
+section.home{
+    flex-direction: row;
+    margin-top: top 0;
+}
+
+
 
 .home-content{
     z-index: 10;
@@ -121,6 +132,12 @@ section{
 h1{
     font-size: 30px;
     font-weight: 500px;
+    
+}
+
+h1:first-letter{
+    font-size: 55px;
+    font-weight: 500;
 }
 
 p{
@@ -134,16 +151,17 @@ p{
     padding: 10px 30px;
     display: inline-block;
     cursor: pointer;
-    margin: 20px 0;
+    margin: 20px ;
     text-decoration: none;
     border: 0;
+    border-radius: 20px;
 
 }
 
 /*Toggle */
 
 .toggle{
-    position: fixed;
+    position: absolute;
     top: 0;
     right:0;
     width: 60px;
@@ -154,6 +172,7 @@ p{
     background-repeat: no-repeat;
     background-position: center ;
     cursor: pointer;
+    border-radius: 0 0 0 10px;
 }
 
 .toggle.active{
@@ -165,3 +184,175 @@ p{
 
 
 
+/*
+Services Page Styling
+ */
+
+
+ section.services{
+    padding-top: 50px;
+
+}
+
+.services {
+    margin-top: 50px;
+    display: grid;
+    gap: 40px;
+    text-align: center;
+}
+
+div.services {
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.services .service .icon img {
+    max-width: 100px;
+}
+
+h1.services_h1{
+    font-size: 1.9rem;
+    font-weight: 450;
+}
+
+p.services_p{
+    font-size: 0.95rem;
+}
+
+
+.services .service {
+    background: rgba(180, 178, 178, 0.09);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow:0 10px 30px rgba(0, 0, 0, 0.15)
+
+}
+.services .service:hover{
+    box-shadow:0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.services .service h2{
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #1b206e;
+}
+
+
+@media(max-width:1068px){
+    .home-img{
+        opacity: 0.3;
+        z-index: -1;   
+    }
+
+    .logo{
+        top: 10px;
+        left: 0px;
+        font-size: 2.2rem;
+        transform: scale(0.8);
+
+    }
+
+    section{
+        padding: 100px 40px;
+    }
+
+    .navigation ul li a {
+
+        font-size: 2rem;
+    }
+
+    html, body, h1{
+        line-height: 1.6rem;
+    
+    }
+
+    h1{
+        margin: 1.1rem;
+        transform: scale(0.9);
+        font-size: 25px;
+        font-weight: 600;
+
+    }
+
+    .toggle {
+        transform: scale(0.8);
+        border-radius: 10px;
+    }
+
+    section.services{
+        padding-left: 4px;
+    }
+
+    div.services{
+        grid-template-columns: repeat(2,1fr);
+
+    }
+    
+}
+
+@media (max-width: 768px){
+    div.services{
+        grid-template-columns: 1fr;
+
+    }
+}
+
+
+/*
+Work page
+*/
+
+.portfolio{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.portfolio .item .action {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+
+.portfolio .item .action a {
+
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 5px 15px;
+}
+
+
+.portfolio .item:hover .action {
+    opacity: 1;
+    border-radius: 10px;
+}
+
+.portfolio .item {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+}
+
+.portfolio .item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
