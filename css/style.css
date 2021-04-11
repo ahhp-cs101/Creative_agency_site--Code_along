@@ -9,6 +9,7 @@
             General
 ***********************************/
 
+/* Coloring of the navigation and the get started */
 :root{
     --pirmary-color: #860ff669;
 }
@@ -520,7 +521,6 @@ Contact Page Styling
 
     }
 
-}
 
 
 /*Work*/
@@ -547,6 +547,31 @@ Contact Page Styling
 /*Contact*/
 @media(max-width:1068px){
 
+    .contact_section {
+        width: 100%;
+        flex-direction: column;
+        padding: 30px 30px 20px;
+    }
+
+    .contact {
+        width: 100%;
+        flex-direction: column;
+        padding: 30px 30px 20px;
+    }
+    
+    .contact-form {
+        width: 100%;
+        padding: 30px 30px 20px;
+    }
+    .contact-form .row {
+        flex-direction: column;
+    }
+    
+    .contact-form .input100, 
+    .contact-form .input50 {
+        width: 100%;
+        margin: 0;
+    }
 
 }
 
